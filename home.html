@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid 19 Inpatient - Beds</title>
+    <style>
+            table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+            
+        }
+        body{
+            background-image: url({{url_for('static',filename='imgs/2img.jpg')}});
+        }
+      
+      </style>
+</head>
+<body>
+    <center>
+        <form action="{{ url_for('predict')}}"method="post">
+            <h1 style="color:rgb(213, 250, 6);" >Covid 19 Total Beds Available</h1>
+            
+            <h3 style="color: whitesmoke;">
+                Pick a Date From the Given Calender 
+            </h3>
+            
+            <label for="start" style="color: white;">
+                Select the Date:
+            </label>
+
+            <input type="date" name="begin" 
+                placeholder="dd-mm-yyyy" value="date"
+                min="2021-05-17 " max="2022-06-15">
+            <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+
+        </form>
+        <br>
+        <br>
+
+        <div>
+            <table bgcolor =white>
+                <tr> 
+                    <th>Date Picked</th> 
+                    <th>Number of Beds available</th>
+                </tr>
+                <tr> 
+                    <td> {{date_picked}}</td>
+                    <td style="color: rgb(240, 10, 10);"> {{ prediction }} </td>
+
+                </tr>
+            </table>
+        </div>
+        <p style="color:whitesmoke;"><strong><b>Note: </b>As Far we are Predicting Availablity of Beds  for only One Year ranges between("2021-05-17" to "2022-06-15")</strong></p>
+    </center>
+    
+
+
+</body>
+</html>
