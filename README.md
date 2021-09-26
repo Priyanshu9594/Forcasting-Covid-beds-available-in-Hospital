@@ -13,7 +13,7 @@ Data Set Details ==> Beds_Occupied.csv is the data set file. This dataset provid
 
 
 
-Depolyement ==>   Deployed using the Flask.
+Depolyement ==>   Deployed using the Flask and Streamlit.
 
-Duration of the Project ==> 30days
+Duration of the Project ==> 3 months
 
